@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="responsiveNav.css">
+    <title>Responsive Navbar</title>
+</head>
+<body>
+    <nav>
+        <ul class="sideBar">
+            <li onclick="hideSideBar()"><a href="#">X</a></li>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Products</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Account</a></li>
+        </ul>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li class="hideOnMobile"><a href="#">Blog</a></li>
+            <li class="hideOnMobile"><a href="#">Products</a></li>
+            <li class="hideOnMobile"><a href="#">About</a></li>
+            <li class="hideOnMobile"><a href="#">Contact</a></li>
+            <li class="hideOnMobile"><a href="#">Account</a></li>
+            <li class="menu-button" onclick="showSideBar()"><a href="#">M</a></li>
+        </ul>
+    </nav>
+
+    <script>
+        function showSideBar(){
+            const sidebar = document.querySelector('.sideBar')
+            sidebar.style.display = 'flex'
+        }
+        function hideSideBar(){
+            const sidebar = document.querySelector('.sideBar')
+            sidebar.style.display = 'none'
+        }
+    </script>
+</body>
+</html>
